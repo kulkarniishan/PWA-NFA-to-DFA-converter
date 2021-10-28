@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../utils/Images/logo.png'
 const navigation = [
-    { name: 'Dashboard', href: '/' },
+    { name: 'Dashboard', href: '/dashboard' },
     { name: 'About Us', href: '/about-us' },
 ]
 
@@ -54,12 +54,12 @@ export default function Navbar() {
                             </div>
                             <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                                 <div className="flex-shrink-0 flex items-center">
-                                    <img
-                                        className="block h-8 w-auto"
-                                        src={logo}
-                                        alt="NFA to DFA converter"
-                                    />
-
+                                    <Link to='/dashboard'>
+                                        <img
+                                            className="block h-8 w-auto"
+                                            src={logo}
+                                            alt="NFA to DFA converter"
+                                        /></Link>
                                 </div>
                                 <div className="hidden sm:block sm:ml-6">
                                     <div className="flex space-x-4">

@@ -2,8 +2,8 @@ import React from 'react'
 
 function NFA_to_DFA() {
     return (
-        <div>
-            
+        <div className='dark:text-white p-10'>
+            I will Convert NFA to DFA
         </div>
     )
 }
