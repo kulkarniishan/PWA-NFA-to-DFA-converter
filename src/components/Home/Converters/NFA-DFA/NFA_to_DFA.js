@@ -1,6 +1,8 @@
 import React from 'react'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { useForm,useFieldArray } from 'react-hook-form'
+import axios from 'axios'
 
 let schema = yup.object().shape({
     inputSymbols: yup.string().required(),
