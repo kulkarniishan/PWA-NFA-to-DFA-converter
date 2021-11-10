@@ -1,8 +1,25 @@
 import React from 'react'
+import * as yup from 'yup'
+import { yupResolver } from '@hookform/resolvers/yup'
+
+let schema = yup.object().shape({
+    inputSymbols: yup.string().required(),
+    transitions: yup.array().of(
+        yup.object().shape({
+            state: yup.string().required(),
+            nextState: yup.string().required(),
+            transitionSymbol: yup.string().required(),
+        })
+    ),
+    startState: yup.string().required(),
+    finalStates: yup.string().required(),
+    inputString: yup.string().required(),
+});
+
 
 function NFA_to_DFA() {
 
-//here index is the curr state
+    //here index is the curr state
     // const test = [
     //     {
     //         a: ['0'],
@@ -63,12 +80,19 @@ function NFA_to_DFA() {
     return (
         <div className='min-h-screen dark:text-white p-10 transition duration-500'>
             I will Convert NFA to DFA
-            <div class="space-y-4">
-                <span class="block bg-green-300 border-b-8 border-r-8 shadow-lg border-green-700 rounded-md w-75 ml-auto my-5" style={{ minHeight: '30vh' }}></span>
-                <span class="block bg-pink-300 border-b-8 border-r-8 shadow-lg border-pink-700 rounded-md w-75 mr-auto my-5" style={{ minHeight: '30vh' }}></span>
-                <span class="block bg-purple-300 border-b-8 border-r-8 shadow-lg border-purple-700 rounded-md w-75 ml-auto my-5" style={{ minHeight: '30vh' }}></span>
-                <span class="block bg-blue-300 border-b-8 border-r-8 shadow-lg border-blue-700 rounded-md w-75 mr-auto my-5" style={{ minHeight: '30vh' }}></span>
+            <div className="space-y-4">
+                <div className="block bg-green-300 border-b-8 border-r-8 shadow-lg border-green-700 rounded-md w-75 ml-auto my-5" style={{ minHeight: '30vh' }}>
 
+                </div>
+                <div className="block bg-pink-300 border-b-8 border-r-8 shadow-lg border-pink-700 rounded-md w-75 mr-auto my-5" style={{ minHeight: '30vh' }}>
+
+                </div>
+                <div className="block bg-purple-300 border-b-8 border-r-8 shadow-lg border-purple-700 rounded-md w-75 ml-auto my-5" style={{ minHeight: '30vh' }}>
+
+                </div>
+                <div className="block bg-blue-300 border-b-8 border-r-8 shadow-lg border-blue-700 rounded-md w-75 mr-auto my-5" style={{ minHeight: '30vh' }}>
+
+                </div>
             </div>
         </div>
     )
