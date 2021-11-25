@@ -1,4 +1,3 @@
-import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import NFA_to_DFA from './Converters/NFA-DFA/NFA_to_DFA'
 import CFG_to_CNF from './Converters/CFG-CNF/CFG_to_CNF'
