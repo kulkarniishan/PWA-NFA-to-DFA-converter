@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 // import { useForm,useFieldArray } from 'react-hook-form'
 // import axios from 'axios'
 
+
+// eslint-disable-next-line
 let schema = yup.object().shape({
     inputSymbols: yup.string().required(),
     transitions: yup.array().of(
@@ -48,17 +50,13 @@ function NFA_to_DFA() {
         var i = 0;
         var prev = 0;
         var answerArray = [];
-        let arr = [];
+        let newStates = [];
         var curr = 1;
 
-        // console.log('arr->',arr)
-        arr.push([start])
-        // console.log([...arr])
+        newStates.push([start])
 
         while (prev !== curr) {
-            prev = arr.length;
-
-            // console.log('\nset',arr[i]);
+            prev = newStates.length;
 
             const rowAdd = {} 
 
@@ -66,53 +64,22 @@ function NFA_to_DFA() {
                 const symbol = symbols[index];
                 var toBeAddedToSet = [];
 
-                for (let newState = 0; newState < arr[i].length; newState++) {
-                    const element = arr[i][newState];
+                for (let newState = 0; newState < newStates[i].length; newState++) {
+                    const element = newStates[i][newState];
                     
-                    // console.log('ele =>',element,symbol);
                     toBeAddedToSet.push( ...test[element][symbol])
-                    // console.log(symbol, ...test[element][symbol]);
                 }
 
                 toBeAddedToSet = uniqueArray(toBeAddedToSet);
-                // console.log('tbas=> ',JSON.parse(JSON.stringify(toBeAddedToSet)));
 
-                arr.push(toBeAddedToSet);
-                arr = uniqueArray(arr);
+                newStates.push(toBeAddedToSet);
+                newStates = uniqueArray(newStates);
 
                 rowAdd[symbol] = toBeAddedToSet
-
-                // console.log([...arr]);
             }
 
-
-            // symbols.forEach(symbol => {
-            //     var toBeAddedToSet = [];
-
-            //     (arr[i]).forEach(element => {
-            //         console.log('ele =>',element);
-            //         // if(test[element][symbol]){
-            //         toBeAddedToSet.push( ...test[element][symbol])
-            //         console.log(symbol, ...test[element][symbol]);
-            //         // }
-            //     })
-            //     toBeAddedToSet = uniqueArray(toBeAddedToSet);
-            //     console.log('tbas=> ',JSON.parse(JSON.stringify(toBeAddedToSet)));
-
-            //     arr.push(toBeAddedToSet);
-            //     arr = uniqueArray(arr);
-
-            //     rowAdd[symbol] = toBeAddedToSet
-
-            //     console.log([...arr]);
-            // });
-
-
-            // console.log('row=> ',rowAdd)
-
-            answerArray.push({state:arr[i],...rowAdd})
-            curr = arr.length;
-            // console.log("Prev, curr",prev,curr)
+            answerArray.push({state:newStates[i],...rowAdd})
+            curr = newStates.length;
             i++
         }
         console.log('Final Answer',answerArray)
