@@ -1,5 +1,8 @@
 import * as yup from 'yup'
-import { /*useEffect, */ useState } from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+var svgtojsx = require('svg-to-jsx');
+
 // import { yupResolver } from '@hookform/resolvers/yup'
 // import { useForm,useFieldArray } from 'react-hook-form'
 // import axios from 'axios'
@@ -23,6 +26,8 @@ let schema = yup.object().shape({
 function NFA_to_DFA() {
 
     const [dfaTable, setDfaTable] = useState(null);
+    const [newDfaStates, setNewDfaStates] = useState(null);
+    const [dfaImage, setDfaImage] = useState(null);
 
     // here index is the curr state
     const test = [
@@ -35,8 +40,8 @@ function NFA_to_DFA() {
             b: ['2'],
         },
         {
-            a: ['2'],
-            b: ['2'],
+            a: [],
+            b: [],
         },
     ]
 
@@ -78,16 +83,72 @@ function NFA_to_DFA() {
                 newStates.push(toBeAddedToSet);
                 newStates = uniqueArray(newStates);
 
-                rowAdd[symbol] = toBeAddedToSet
+                rowAdd[symbol] = toBeAddedToSet.toString()
             }
             let tempNewStates = newStates[i]
             const isFinalState = finalStates.every(k => tempNewStates.includes(k));
-            answerArray.push({ state: newStates[i], ...rowAdd , isFinalState})
+            answerArray.push({ state: newStates[i].toString(), ...rowAdd, isFinalState })
             curr = newStates.length;
             i++
         }
         console.log('Final Answer', answerArray)
+        setNewDfaStates(newStates);
+        console.log(newStates)
         setDfaTable(answerArray);
+    }
+
+    useEffect(() => {
+        if (dfaTable) {
+            visualize()
+        }
+    }, [dfaTable])
+
+
+    const visualize = () => {
+        let finalString = 'digraph G {rankdir=LR;size="8,5";'
+
+        //Setting the final states (double circle)
+        let doubleCircle = 'node [shape = doublecircle,color = darkturquoise];'
+
+        //Setting the non-final states (circle)
+        let circle = 'node [shape = circle, color = black];'
+        let plain = '"start" [shape = plain];'
+
+        //initial (Start) state
+
+        let init = `"start" -> "${start}";`
+        let transition = ''
+        console.log(dfaTable)
+
+        for (let i = 0; i < dfaTable.length; i++) {
+            let row = dfaTable[i];
+
+            if (row.isFinalState) {
+                doubleCircle += ` "${row.state}"`
+            }
+
+            for (const symbolIdx in symbols) {
+                const symbol = symbols[symbolIdx]
+                console.log('row=>', row, 'symbol=>', symbol)
+                var tempTransition = `"${row.state}" -> "${row[symbol]}" [label = "${symbol}"];`
+                transition += " " + tempTransition
+            }
+
+        }
+        doubleCircle +=';'
+        console.log(doubleCircle)
+        console.log(transition);
+
+        var diagraph = finalString+doubleCircle+circle+plain+init+transition+'}'
+        console.log(diagraph)
+
+        axios.get(`https://quickchart.io/graphviz?graph=${diagraph}`)
+        .then((image)=>{
+            if(image.data)
+                setDfaImage(encodeURIComponent(image.data))
+        })
+        .catch((error)=>console.log(error.response))
+
 
     }
 
@@ -98,11 +159,11 @@ function NFA_to_DFA() {
 
     const getDfaTable = () => {
         return (
-            <table className='min-w-full divide-y divide-gray-200 mb-2'>
-                <thead className='bg-gray-50'>
+            <table className='divide-y divide-gray-200 m-2'>
+                <thead className='border-8 border-white '>
                     <tr><th rowSpan='2' className="
-                  px-6
-                  py-3
+                  px-4
+                  py-1
                   text-center text-auto
                   font-auto
                   text-gray-500
@@ -111,8 +172,8 @@ function NFA_to_DFA() {
                   divide-y divide-gray-200
                 "
                     >States</th><th colSpan={symbols.length} className="
-                  px-6
-                  py-3
+                  px-4
+                  py-1
                   text-center text-auto
                   font-auto
                   text-gray-500
@@ -122,8 +183,8 @@ function NFA_to_DFA() {
                     >Symbols</th></tr>
                     <tr>{symbols.map((symbol, key) =>
                         <th key={key} className="
-                        px-6
-                        py-3
+                        px-4
+                        py-1
                         text-center text-auto
                         font-auto
                         text-gray-500
@@ -133,8 +194,8 @@ function NFA_to_DFA() {
                         >{symbol}</th>)}
                     </tr>
                 </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                    {dfaTable.map((row, key) => <tr key={key}><td className="px-6 py-4 whitespace-nowrap text-center text-auto"><span className='text-red-600 font-lg'>{row.isFinalState?'*':''}</span>{ row.state.toString()}</td>
+                <tbody className="">
+                    {dfaTable.map((row, key) => <tr key={key} className='border-8 border-white '><td className="px-4 py-4 whitespace-nowrap text-center text-auto"><span className='text-red-600 font-lg'>{row.isFinalState ? '*' : ''}</span>{row.state.toString()}</td>
                         {symbols.map((symbol, key) =>
                             <td key={key} className='text-center text-auto'>{row[symbol].toString()}</td>)}
                     </tr>)}
@@ -151,16 +212,19 @@ function NFA_to_DFA() {
                 <div className="block bg-green-300 border-b-8 border-r-8 shadow-lg border-green-700 rounded-md w-75 ml-auto my-5" style={{ minHeight: '30vh' }} >
 
                 </div>
-                <div className="block grid bg-pink-300 border-b-8 border-r-8 shadow-lg border-pink-700 rounded-md w-75 mr-auto my-5" style={{ minHeight: '30vh' }}>
+                <div className="grid bg-pink-300 border-b-8 border-r-8 shadow-lg border-pink-700 rounded-md w-75 mr-auto my-5" style={{ minHeight: '30vh' }}>
                     {/* Displaying the state transition table */}
-                    {dfaTable ? getDfaTable():''}
+                    {dfaTable ? getDfaTable() : ''}
                     <div className="grid grid-cols-12 gap-4 mt-auto mb-2">
                         <input type="button" value="Convert " className='col-end-12 col-span-3 py-2 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded'
                             onClick={evaluate_NFA_to_DFA} />
                     </div>
                 </div>
                 <div className="block bg-purple-300 border-b-8 border-r-8 shadow-lg border-purple-700 rounded-md w-75 ml-auto my-5" style={{ minHeight: '30vh' }}>
+                    {
+                        dfaImage && <embed src={`data:image/svg+xml,${dfaImage}`} className = 'w-75 my-5' alt="dfa" />
 
+                    }
                 </div>
                 <div className="block bg-blue-300 border-b-8 border-r-8 shadow-lg border-blue-700 rounded-md w-75 mr-auto my-5" style={{ minHeight: '30vh' }}>
 
