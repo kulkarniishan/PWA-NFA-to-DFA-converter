@@ -1,11 +1,9 @@
 import * as yup from 'yup'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-var svgtojsx = require('svg-to-jsx');
 
-// import { yupResolver } from '@hookform/resolvers/yup'
-// import { useForm,useFieldArray } from 'react-hook-form'
-// import axios from 'axios'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { useForm,useFieldArray } from 'react-hook-form'
 
 
 // eslint-disable-next-line
@@ -28,6 +26,15 @@ function NFA_to_DFA() {
     const [dfaTable, setDfaTable] = useState(null);
     const [newDfaStates, setNewDfaStates] = useState(null);
     const [dfaImage, setDfaImage] = useState(null);
+
+        const { register, handleSubmit, formState: { errors },setValue,getValues,control, reset} = useForm({
+        resolver:yupResolver(schema),
+    })
+
+    const transitionFields = useFieldArray({
+        control,
+        name:"transitions"
+    })
 
     // here index is the curr state
     const test = [
