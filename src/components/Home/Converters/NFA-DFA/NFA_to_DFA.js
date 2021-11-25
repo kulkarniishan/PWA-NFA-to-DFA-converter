@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import { yupResolver } from '@hookform/resolvers/yup'
-import { useForm,useFieldArray } from 'react-hook-form'
+import { useForm, useFieldArray } from 'react-hook-form'
 
 
 // eslint-disable-next-line
@@ -27,13 +27,13 @@ function NFA_to_DFA() {
     const [newDfaStates, setNewDfaStates] = useState(null);
     const [dfaImage, setDfaImage] = useState(null);
 
-        const { register, handleSubmit, formState: { errors },setValue,getValues,control, reset} = useForm({
-        resolver:yupResolver(schema),
+    const { register, handleSubmit, formState: { errors }, setValue, getValues, control, reset } = useForm({
+        resolver: yupResolver(schema),
     })
 
     const transitionFields = useFieldArray({
         control,
-        name:"transitions"
+        name: "transitions"
     })
 
     // here index is the curr state
@@ -142,19 +142,19 @@ function NFA_to_DFA() {
             }
 
         }
-        doubleCircle +=';'
+        doubleCircle += ';'
         console.log(doubleCircle)
         console.log(transition);
 
-        var diagraph = finalString+doubleCircle+circle+plain+init+transition+'}'
+        var diagraph = finalString + doubleCircle + circle + plain + init + transition + '}'
         console.log(diagraph)
 
         axios.get(`https://quickchart.io/graphviz?graph=${diagraph}`)
-        .then((image)=>{
-            if(image.data)
-                setDfaImage(encodeURIComponent(image.data))
-        })
-        .catch((error)=>console.log(error.response))
+            .then((image) => {
+                if (image.data)
+                    setDfaImage(encodeURIComponent(image.data))
+            })
+            .catch((error) => console.log(error.response))
 
 
     }
@@ -211,6 +211,12 @@ function NFA_to_DFA() {
         )
     }
 
+    const stringValid = ()=>{
+        console.log(getValues())
+    }
+
+
+
     return (
         <div className='min-h-screen dark:text-white p-10 transition duration-500'>
             I will Convert NFA to DFA
@@ -223,17 +229,28 @@ function NFA_to_DFA() {
                     {/* Displaying the state transition table */}
                     {dfaTable ? getDfaTable() : ''}
                     <div className="grid grid-cols-12 gap-4 mt-auto mb-2">
-                        <input type="button" value="Convert " className='col-end-12 col-span-3 py-2 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded'
+                        <input type="button" value="Convert" className='col-end-12 col-span-3  bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded'
                             onClick={evaluate_NFA_to_DFA} />
                     </div>
                 </div>
                 <div className="block bg-purple-300 border-b-8 border-r-8 shadow-lg border-purple-700 rounded-md w-75 ml-auto my-5" style={{ minHeight: '30vh' }}>
                     {
-                        dfaImage && <embed src={`data:image/svg+xml,${dfaImage}`} className = 'w-75 my-5' alt="dfa" />
+                        dfaImage && <embed src={`data:image/svg+xml,${dfaImage}`} className='max-h-full' alt="dfa" />
 
                     }
                 </div>
-                <div className="block bg-blue-300 border-b-8 border-r-8 shadow-lg border-blue-700 rounded-md w-75 mr-auto my-5" style={{ minHeight: '30vh' }}>
+                <div className="block bg-blue-300 border-b-8 border-r-8 shadow-lg border-blue-700 rounded-md w-75 mr-auto my-5 py-2" style={{ minHeight: '30vh' }}>
+                    <div className="container text-gray-700 text-sm font-bold my-2">
+                        <div className="block mb-3">
+                        <input class="shadow appearance-none border rounded w-75 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="inputString" type="text" placeholder="Input String"  {...register('inputString')} />
+                        </div>
+
+                        <div className="grid grid-cols-8">
+                        <input type="button" value="Check" className='col-end-7 col-span-3  bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:green-blue-500 rounded'
+                            onClick={stringValid} />
+                        </div>
+
+                    </div>
 
                 </div>
             </div>
