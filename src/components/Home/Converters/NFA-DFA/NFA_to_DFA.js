@@ -26,6 +26,7 @@ function NFA_to_DFA() {
     const [dfaTable, setDfaTable] = useState(null);
     const [newDfaStates, setNewDfaStates] = useState(null);
     const [dfaImage, setDfaImage] = useState(null);
+    const [acceptanceStatus, setAcceptanceStatus] = useState(null);
 
     const { register, handleSubmit, formState: { errors }, setValue, getValues, control, reset } = useForm({
         resolver: yupResolver(schema),
@@ -211,8 +212,28 @@ function NFA_to_DFA() {
         )
     }
 
-    const stringValid = ()=>{
+    const stringValid = () => {
         console.log(getValues())
+
+        const str = getValues('inputString')
+
+        //Setting the current state
+        var curr = start
+        let currRow;
+        console.log(str.length)
+        for (var i = 0; i < str.length; i++) {
+            const char = str[i];
+            currRow = dfaTable.filter(obj => {
+                return obj.state == curr
+              })[0]
+              console.log(currRow,char)
+            curr = currRow[char]
+            console.log(curr)
+        }
+        currRow = dfaTable.filter(obj => {
+            return obj.state == curr
+          })[0]
+        setAcceptanceStatus(currRow.isFinalState)
     }
 
 
@@ -242,16 +263,15 @@ function NFA_to_DFA() {
                 <div className="block bg-blue-300 border-b-8 border-r-8 shadow-lg border-blue-700 rounded-md w-75 mr-auto my-5 py-2" style={{ minHeight: '30vh' }}>
                     <div className="container text-gray-700 text-sm font-bold my-2">
                         <div className="block mb-3">
-                        <input class="shadow appearance-none border rounded w-75 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="inputString" type="text" placeholder="Input String"  {...register('inputString')} />
+                            <input class="shadow appearance-none border rounded w-75 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="inputString" type="text" placeholder="Input String"  {...register('inputString')} />
                         </div>
 
                         <div className="grid grid-cols-8">
-                        <input type="button" value="Check" className='col-end-7 col-span-3  bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:green-blue-500 rounded'
-                            onClick={stringValid} />
+                            <input type="button" value="Check" className='col-end-7 col-span-3  bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:green-blue-500 rounded'
+                                onClick={stringValid} />
                         </div>
-
+                        {acceptanceStatus==true?'String Accepted':(acceptanceStatus==false?'String Rejected':'')}
                     </div>
-
                 </div>
             </div>
         </div>
