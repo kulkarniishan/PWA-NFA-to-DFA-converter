@@ -1,9 +1,7 @@
-# NFA-to-DFA-converter
+<h1 align="center">NFA-to-DFA-converter</h1>
 
 <p align="center">
-  <a href="" rel="noopener">
-<!--  <img width=200px src="client\src\components\Naviga/tionBar\image3.png" background='white' alt="Project logo" style='background-color: white'></a> -->
- <img width=200px src="client\src\components\NavigationBar\image.png" background='white' alt="Project logo" style='background-color: white'></a>
+ <img width=200px src="PWA-NFA-to-DFA-converter/public/favicon.ico"  alt="Project logo" style='background-color: white'></a>
 </p>
 
 
