@@ -53,6 +53,10 @@ function NFA_to_DFA() {
     //     },
     // ]
 
+    useEffect(() => {
+        console.log(errors)
+    }, [errors])
+
 
 
 
@@ -104,7 +108,7 @@ function NFA_to_DFA() {
             newStates.push([start])
 
             while (prev !== curr) {
-                prev = newStates.length;
+                prev += newStates.length > prev ? 1 : 0;
 
                 const rowAdd = {}
 
@@ -124,12 +128,15 @@ function NFA_to_DFA() {
 
                     rowAdd[symbol] = toBeAddedToSet.toString()
                 }
-                // console.log(newStates)
+                console.log(newStates)
                 let tempNewStates = newStates[i]
                 const isFinalState = finalStates.every(k => tempNewStates.includes(k));
                 answerArray.push({ state: newStates[i].toString(), ...rowAdd, isFinalState })
-                curr = newStates.length;
+                curr += newStates.length > prev ? 1 : 0;
+                console.log(prev, curr, i)
                 i++
+                console.log(prev, curr, i)
+
             }
             // console.log('Final Answer', answerArray)
 
@@ -182,7 +189,7 @@ function NFA_to_DFA() {
                 for (const symbolIdx in symbols) {
                     const symbol = symbols[symbolIdx]
                     // console.log('row=>', row, 'symbol=>', symbol)
-                    var tempTransition = `"${row.state===""?`Φ`:row.state}" -> "${row[symbol]===""?`Φ`:row[symbol]}" [label = "${symbol}"];`
+                    var tempTransition = `"${row.state === "" ? `Φ` : row.state}" -> "${row[symbol] === "" ? `Φ` : row[symbol]}" [label = "${symbol}"];`
                     transition += " " + tempTransition
                 }
 
@@ -249,13 +256,14 @@ function NFA_to_DFA() {
                         uppercase
                         tracking-wider
                       "
-                        >{symbol==""?'Φ':symbol}</th>)}
+                        >{symbol}</th>)}
                     </tr>
                 </thead>
                 <tbody className="">
-                    {dfaTable.map((row, key) => <tr key={key} className='border-8 border-white '><td className="px-4 py-4 whitespace-nowrap text-center text-auto"><span className='text-red-600 font-lg'>{row.isFinalState ? '*' : ''}</span>{row.state.toString()}</td>
+                    {dfaTable.map((row, key) => <tr key={key} className='border-8 border-white '>
+                        <td className="px-4 py-4 whitespace-nowrap text-center text-auto"><span className='text-red-600 font-lg'>{row.isFinalState ? '*' : ''}</span>{row.state.toString() == "" ? 'Φ' : row.state.toString()}</td>
                         {symbols.map((symbol, key) =>
-                            <td key={key} className='text-center text-auto'>{row[symbol] ? row[symbol].toString() :'Φ'}</td>)}
+                            <td key={key} className='text-center text-auto'>{row[symbol] ? row[symbol].toString() : 'Φ'}</td>)}
                     </tr>)}
                 </tbody>
             </table>
@@ -397,13 +405,13 @@ function NFA_to_DFA() {
 
 
                         <div className="grid grid-cols-8">
-                            <input type="button" value="Check" className='col-end-7 col-span-3  bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:green-blue-500 rounded'
+                            <input type="button" value="Check" className='col-end-6 col-span-2  bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:green-blue-500 rounded'
                                 onClick={stringValid} />
                         </div>
                         {acceptanceStatus === true ?
-                            <div className="bg-green-500 text-xl w-25 mx-auto rounded-full py-1 px-2 text-center text-white mb-3 ">String Accepted</div>
+                            <div className="bg-green-500 text-xl w-25 mx-auto rounded-full py-1 px-2 text-center mt-4 text-white mb-3 ">String Accepted</div>
                             : (acceptanceStatus === false ?
-                                <div className="bg-red-600 text-xl w-25 mx-auto rounded-full py-1 px-2 text-center text-white mb-3 ">String Rejected</div>
+                                <div className="bg-red-600 text-xl w-25 mx-auto rounded-2xl py-1 px-2 text-center mt-4 text-white mb-3 ">String Rejected</div>
                                 : '')}
                     </div>
                 </div>
