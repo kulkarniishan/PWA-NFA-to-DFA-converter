@@ -1,7 +1,7 @@
 <h1 align="center">NFA-to-DFA-converter</h1>
 
 <p align="center">
- <img width=200px src="https://github.com/kulkarniishan/PWA-NFA-to-DFA-converter/blob/main/src/utils/Images/logo.png?raw=true"  alt="Project logo" style='background-color: white'></a>
+ <img width=200px src="PWA-NFA-to-DFA-converter/src/utils/Images/logo1.svg"  alt="Project logo" style='background-color: white'></a>
 </p>
 
 
