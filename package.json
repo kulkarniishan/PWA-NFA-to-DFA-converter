@@ -1,8 +1,11 @@
 {
+  "homepage": "http://kulkarniishan.github.io/PWA-NFA-to-DFA-converter",
   "name": "nfa-to-dfa-converter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "@craco/craco": "^6.4.0",
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.5",
@@ -11,6 +14,7 @@
     "axios": "^0.23.0",
     "bootstrap": "^5.1.3",
     "cra-template": "1.1.2",
+    "gh-pages": "^3.2.3",
     "postcss": "^7.0.39",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0",
@@ -46,6 +50,6 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-     ]
+    ]
   }
 }
