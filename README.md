@@ -19,8 +19,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Operator of a film festival submissions platform intended for filmmakers and festival organizers. 
-The company helps clients discover, submit and get tickets to film festivals and creative contests
+Website designed to accept the input about the states and transtions of a Non-Deterministic Automata (NFA) and to convert it into an equivalent Deterministic Finite Automata (DFA) and visualize it.
 <br> 
 
 
