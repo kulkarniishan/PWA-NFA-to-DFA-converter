@@ -130,7 +130,10 @@ function NFA_to_DFA() {
                 }
                 console.log(newStates)
                 let tempNewStates = newStates[i]
-                const isFinalState = finalStates.every(k => tempNewStates.includes(k));
+                console.log(finalStates)
+
+                var isFinalState = finalStates.some(n => tempNewStates.some(h=> h===n))
+
                 answerArray.push({ state: newStates[i].toString(), ...rowAdd, isFinalState })
                 curr += newStates.length > prev ? 1 : 0;
                 console.log(prev, curr, i)
@@ -141,6 +144,7 @@ function NFA_to_DFA() {
             // console.log('Final Answer', answerArray)
 
             setDfaTable(answerArray);
+            console.log(dfaTable);
         }
         catch (Exception) {
             console.log(Exception)
@@ -151,6 +155,7 @@ function NFA_to_DFA() {
         if (dfaTable) {
             visualize()
         }
+        // eslint-disable-next-line
     }, [dfaTable])
 
     useEffect(() => {
@@ -159,6 +164,7 @@ function NFA_to_DFA() {
             nextState: "",
             transitionSymbol: "",
         })
+        // eslint-disable-next-line
     }, [])
 
 
@@ -224,7 +230,7 @@ function NFA_to_DFA() {
         // console.log(dfaTable)
         var symbols = getValues('inputSymbols').split(" ")
         return (
-            <table className='divide-y divide-gray-200 m-2'>
+            <table className='divide-y divide-gray-200 m-2 mx-auto w-75'>
                 <thead className='border-8 border-white '>
                     <tr><th rowSpan='2' className="
                   px-4
@@ -261,7 +267,7 @@ function NFA_to_DFA() {
                 </thead>
                 <tbody className="">
                     {dfaTable.map((row, key) => <tr key={key} className='border-8 border-white '>
-                        <td className="px-4 py-4 whitespace-nowrap text-center text-auto"><span className='text-red-600 font-lg'>{row.isFinalState ? '*' : ''}</span>{row.state.toString() == "" ? 'Φ' : row.state.toString()}</td>
+                        <td className="px-4 py-4 whitespace-nowrap text-center text-auto"><span className='text-red-600 font-lg'>{row.isFinalState ? '*' : ''}</span>{row.state.toString() === "" ? 'Φ' : row.state.toString()}</td>
                         {symbols.map((symbol, key) =>
                             <td key={key} className='text-center text-auto'>{row[symbol] ? row[symbol].toString() : 'Φ'}</td>)}
                     </tr>)}
@@ -277,16 +283,18 @@ function NFA_to_DFA() {
             const str = getValues('inputString')
 
             //Setting the current state
-            var curr = getValues('startState')[0]
+            let curr = getValues('startState')[0]
             let currRow;
             // console.log(str.length)
             for (var i = 0; i < str.length; i++) {
                 const char = str[i];
+                // eslint-disable-next-line
                 currRow = dfaTable.filter(obj => {
                     return obj.state === curr
                 })[0]
                 curr = currRow[char]
             }
+            // eslint-disable-next-line
             currRow = dfaTable.filter(obj => {
                 return obj.state === curr
             })[0]
@@ -305,7 +313,7 @@ function NFA_to_DFA() {
             <div className="space-y-4">
 
                 {/* Section-1 */}
-                <div className="block bg-green-300 border-b-8 border-r-8 shadow-lg py-4 border-green-700 rounded-md w-75 ml-auto my-5" style={{ minHeight: '30vh' }} >
+                <div className="block bg-green-300 border-b-8 border-r-8 shadow-lg py-4 border-green-700 rounded-md w-full md:w-3/4 ml-auto my-5" style={{ minHeight: '30vh' }} >
                     <div className="bg-green-700 text-xl w-25 mx-auto rounded-full py-1 px-2 text-center text-white mb-3 ">Input Fields</div>
 
                     <div className="grid grid-rows gap-4">
@@ -373,12 +381,12 @@ function NFA_to_DFA() {
                 </div>
 
                 {/* Section-2 */}
-                <div className="grid bg-pink-300 border-b-8 border-r-8 shadow-lg border-pink-700 rounded-md w-75 mr-auto my-5 py-2 overflow-x-auto" style={{ minHeight: '30vh' }}>
+                <div className="block bg-pink-300 border-b-8 border-r-8 shadow-lg border-pink-700  items- rounded-md w-full md:w-3/4 mr-auto my-5 px-4 py-3 overflow-x-auto grid-flow-row" style={{ minHeight: '30vh' }}>
                     <div className="bg-red-700 text-xl w-25 mx-auto rounded-full py-1 px-2 text-center text-white mb-3 ">Transition Table</div>
 
                     {/* Displaying the state transition table */}
                     {dfaTable ? getDfaTable() : ''}
-                    <div className="grid grid-cols-12 mt-auto mb-2">
+                    <div className="grid grid-cols-12 mb-2 mt-auto">
                         <input type="button" value="Convert" className='col-end-12 col-span-6  bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded'
                             onClick={evaluate_NFA_to_DFA} />
                     </div>
@@ -386,7 +394,7 @@ function NFA_to_DFA() {
 
                 {/* Section-3 */}
 
-                <div className="block bg-purple-300 border-b-8 border-r-8 shadow-lg border-purple-700 rounded-md w-75 ml-auto my-5 py-2" style={{ minHeight: '30vh' }}>
+                <div className="block bg-purple-300 border-b-8 border-r-8 shadow-lg border-purple-700 rounded-md w-full md:w-3/4 ml-auto my-5 py-2" style={{ minHeight: '30vh' }}>
                     <div className="bg-purple-700 text-xl w-25 mx-auto rounded-full py-1 px-2 text-center text-white mb-3 ">DFA Diagram</div>
                     {
                         dfaImage && <embed src={`data:image/svg+xml,${dfaImage}`} className='object-contain h-64 w-full' alt="dfa" />
@@ -395,7 +403,7 @@ function NFA_to_DFA() {
                 </div>
 
                 {/* Section-4 */}
-                <div className="block bg-blue-300 border-b-8 border-r-8 shadow-lg border-blue-700 rounded-md w-75 mr-auto my-5 py-2" style={{ minHeight: '30vh' }}>
+                <div className="block bg-blue-300 border-b-8 border-r-8 shadow-lg border-blue-700 rounded-md w-full md:w-3/4 mr-auto my-5 py-2" style={{ minHeight: '30vh' }}>
                     <div className="bg-blue-700 text-xl w-25 mx-auto rounded-full py-1 px-2 text-center text-white mb-3 ">Test A String</div>
 
                     <div className="container text-gray-700 text-sm font-bold my-2">

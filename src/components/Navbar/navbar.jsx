@@ -1,15 +1,9 @@
-import { useEffect, useState, Fragment } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { useEffect, useState } from 'react';
+import { Disclosure} from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../utils/Images/logo.png'
-import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/solid'
 
-
-
-const converters = [
-    { name: 'NFA TO DFA CONVERTER', href: "/dashboard" },
-]
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -27,8 +21,6 @@ export default function Navbar() {
             setDarkMode(false);
         }
     }, [])
-
-    const Location = useLocation();
 
 
     useEffect(() => {
@@ -119,34 +111,17 @@ export default function Navbar() {
 
                     <Disclosure.Panel className="sm:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1">
-                            <Disclosure >
-                                {({ open }) => (
-                                    <>
-
-                                        <Disclosure.Button className={`flex justify-between w-100 text-left text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white no-underline block px-3 py-2 rounded-md text-base font-medium ${Location.pathname.startsWith('/dashboard') ? 'bg-gray-900 text-white hover:bg-gray-900 hover:text-white' : ''}`}>
-                                            <span>Home</span><ChevronUpIcon
-                                                className={`${open ? 'transform rotate-180' : ''
-                                                    } w-5 h-5 text-purple-500`}
-                                            />
-                                        </Disclosure.Button>
-                                        <Disclosure.Panel className="text-gray-500">
-                                            {converters.map((value, key) =>
-                                                <Disclosure.Button
-                                                    key={key}
-                                                    as={NavLink}
-                                                    className={'my-2 group flex rounded-md items-center w-full px-2 py-2 text-sm no-underline px-3 py-2 rounded-md text-sm font-medium text-gray-900 bg-gray-300 shadow-inner hover:text-gray-700 hover:bg-gray-500 dark:text-gray-500 dark:bg-gray-900 dark:hover:text-gray-300 dark:hover:bg-gray-700'}
-                                                    to={value.href}
-                                                    exact
-                                                    activeClassName='text-white bg-red-600 hover:text-gray-100 hover:bg-red-600 dark:text-white dark:bg-red-600 dark:hover:text-gray-100 dark:hover:bg-red-600'
-                                                >
-                                                    {value.name}
-                                                </Disclosure.Button>
-                                            )
-                                            }
-                                        </Disclosure.Panel>
-                                    </>
+                            <Disclosure.Button
+                                as={NavLink}
+                                exact
+                                to={'/dashboard'}
+                                className={classNames(
+                                    'text-gray-300 hover:bg-gray-700 hover:text-white no-underline block px-3 py-2 rounded-md text-base font-medium'
                                 )}
-                            </Disclosure>
+                                activeClassName='bg-gray-900 text-white hover:bg-gray-900 hover:text-white'
+                            >
+                                {'NFA TO DFA CONVERTER'}
+                            </Disclosure.Button>
                             <Disclosure.Button
                                 as={NavLink}
                                 exact
