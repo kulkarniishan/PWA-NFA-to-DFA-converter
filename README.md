@@ -11,13 +11,10 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment (AWS INFO)](#deployment)
 - [Built Using](#built_using)
 - [Packages](#packages)
 - [Remaining Task](#remainingtasks)
-<!-- - [Authors](#authors)
-- [Acknowledgments](#acknowledgement) -->
-
+- [Authors](#authors)
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-about-a-name--abouta)
 
