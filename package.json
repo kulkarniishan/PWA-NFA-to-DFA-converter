@@ -4,8 +4,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "@craco/craco": "^6.4.0",
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.5",
@@ -29,6 +27,8 @@
     "yup": "^0.32.11"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
