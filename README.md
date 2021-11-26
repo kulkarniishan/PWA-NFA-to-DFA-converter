@@ -10,7 +10,7 @@
 ## 📝 Table of Contents
 
 - [About](#about)
-- [Getting Started](#getting_started)
+- [Getting Started ](#getting_started)
 - [Built Using](#built_using)
 - [Packages](#packages)
 - [Authors](#authors)
