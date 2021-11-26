@@ -1,4 +1,4 @@
-# NFA-to-DFA-converter
+<h1 align="center" style="color:red;">NFA-to-DFA-converter</h1>
 
 <p align="center">
   <a href="" rel="noopener">
