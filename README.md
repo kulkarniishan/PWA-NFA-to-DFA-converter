@@ -13,7 +13,6 @@
 - [Getting Started](#getting_started)
 - [Built Using](#built_using)
 - [Packages](#packages)
-- [Remaining Task](#remainingtasks)
 - [Authors](#authors)
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-about-a-name--abouta)
@@ -56,7 +55,7 @@ A step by step series of examples that tell you how to get a development env run
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-built-using-a-name--built_usinga)
 
-## ⛏️ Built Using <a name = "built_using"></a>
+## :hammer_and_wrench: Built Using <a name = "built_using"></a>
 
 - [React](https://reactjs.org/) - Web Framework
 - [Tailwind CSS](https://tailwindcss.com/) - CSS Framework
