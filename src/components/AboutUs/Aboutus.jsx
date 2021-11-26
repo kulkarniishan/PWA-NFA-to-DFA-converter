@@ -39,7 +39,7 @@ function Aboutus() {
                                 </div>
                                 <div className="row-span mx-auto">
                                     <div className="container hover:bg-blue-400 bg-blue-600 rounded-lg text-lg  px-4 py-1 ">
-                                        <a className='text-white no-underline grid  grid-cols-2' href="https://github.com/kulkarniishan">
+                                        <a className='text-white no-underline grid  grid-cols-2' target='_blank' href="https://github.com/kulkarniishan">
                                             <span className='col-span-1'>
                                                 <img src={githubLogo} width='30em' alt="github Logo" />
                                             </span>
@@ -86,7 +86,7 @@ function Aboutus() {
                                 </div>
                                 <div className="row-span mx-auto">
                                     <div className="container hover:bg-blue-400 bg-blue-600 rounded-lg text-lg  px-4 py-1 ">
-                                        <a className=' no-underline grid  grid-cols-2' href="https://github.com/kulkarniishan">
+                                        <a className=' no-underline grid  grid-cols-2' target='_blank' href="https://github.com/kulkarniishan">
                                             <span className='col-span-1'>
                                                 <img src={githubLogo} width='30em' alt="github Logo" />
                                             </span>
@@ -98,18 +98,54 @@ function Aboutus() {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-9 md:col-span-3 max-h-1/4 bg-yellow-300 border-b-8 border-r-8 shadow-lg border-purple-700 rounded-md" style={{ minHeight: '30vh' }}>
-                    <div class="relative w-40 h-40" align="center">
-                        &nbsp;
-                        <img class="rounded-full border border-gray-100 shadow-sm" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVLqfekg_kitC_QJ5kgBUTh2tt5EIcxEnQDQ&usqp=CAU" alt="Akshad" />
-                    </div>
-                    &nbsp;&nbsp;&nbsp;
-                    <div>
-                        <h4>Akshad Thole</h4>
-                        <h5>1914062</h5>
-                        <h5>TY B.Tech IT</h5>
+                <div className="col-span-9 md:col-span-3 max-h-1/4 bg-yellow-300 border-b-8 border-r-8 shadow-lg border-yellow-700 rounded-md " style={{ minHeight: '30vh' }}>
+                    <div className="grid grid-flow-rows grid-rows my-3 gap-4">
+                        <div class="row-span">
+                            <div class="w-40 h-40 mx-auto">
+                                <img class="rounded-full border border-gray-100 shadow-sm mx-2" src=
+                                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVLqfekg_kitC_QJ5kgBUTh2tt5EIcxEnQDQ&usqp=CAU"
+                                    alt="Akshad"
+                                />
+                            </div>
+                        </div>
+                        <div class="row-span">
+                            <div className="grid grid-flow-cols mx-auto gap-4">
+                                <div className="row-span mx-auto">
+                                    <div className="container bg-yellow-700 rounded-lg  px-3 py-1">
+                                        <h4>Akshad Thole</h4>
+                                    </div>
+                                </div>
+                                <div className="row-span mx-auto">
+                                    <div className="container bg-yellow-700 rounded-lg  px-3 py-1">
+                                        <h5>1914062</h5>
+                                    </div>
+                                </div>
+                                <div className="row-span mx-auto">
+                                    <div className="container bg-yellow-700 rounded-lg  px-3 py-1">
+                                        <h5>TY B.Tech IT</h5>
+                                    </div>
+                                </div>
+                                <div className="row-span mx-auto px-3">
+                                    <div className="container border-2 border-yellow-700 rounded-lg  px-3 py-1">
+                                        <p class="text-yellow-700 text-lg">Description</p>
+                                        <p class="text-yellow-700 text-md">A passionate Full Stack Software Developer 🚀 and Machine Learning Enthusiast 🤖 having an experience of building Web and Mobile applications</p>
+                                    </div>
+                                </div>
+                                <div className="row-span mx-auto">
+                                    <div className="container hover:bg-blue-400 bg-blue-600 rounded-lg text-lg  px-4 py-1 ">
+                                        <a className=' no-underline grid  grid-cols-2' target='_blank' href="https://github.com/akshadthole">
+                                            <span className='col-span-1'>
+                                                <img src={githubLogo} width='30em' alt="github Logo" />
+                                            </span>
+                                            <span className='col-span-1 text-white'>Github</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
             <div className="space-y-4">
 
