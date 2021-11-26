@@ -33,9 +33,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- [MongoDB](https://www.mongodb.com/)
-- [Express](https://expressjs.com/)
-- [NodeJs](https://nodejs.org/en/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 
 ### Installing
@@ -55,57 +54,14 @@ A step by step series of examples that tell you how to get a development env run
 - Open [localhost:3000](localhost:3000) in the browser
 
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-running-the-tests-a-name--testsa)
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-#### Creds for AWS Account: ####
-- Email: <b >allfilmfestival0@gmail.com</b><br>
-- Password: <b>Shrikant@6789</b>
-
-#### Important info for the AWS EC2 instance ####
-
-<div>
-- Steps to start/update the EC2 instance.<br>
-<b>(i)</b> Complete the SSH authentication from the terminal on UNIX OS or with PUTTY on Windows OS.</br>
-<b>(ii)</b> After SSH auth completion, run command to change to the root user.</br>
-
-```bash
-sudo su -
-``` 
-<b>(iii)</b> run cd all_film_festival to got to the project folder</br>
-<b>(iv)</b> the project folders can be updated as required.</br>
-<b>(v)</b> After updation, run the command to restart the backend server</br>
-
-```bash
-pm2 restart server.js
-``` 
-<b>(vi)</b> Finally run the command to restart the nginx server.</br>
-
-```bash
-sudo systemctl restart nginx
-``` 
-</div>
-</br>
-  
-  Extras:
-- <p>to access/edit the nginx config file, run the command <b>
-```bash
-sudo nano /etc/nginx/sites-available/default
-``` 
-- </b> in the root folder.</p>
-- <p>If any error occurs, always check the <b>nginx config file, server.js file</b> and the <b>axios setup file</b> first.</p>
-
-
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-built-using-a-name--built_usinga)
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [ReactJs](https://reactjs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [React](https://reactjs.org/) - Web Framework
+- [Tailwind CSS](https://tailwindcss.com/) - CSS Framework
+- [GraphViz API](https://github.com/DomParfitt/graphviz-react#readme) - Library for visualization of the DFA
+- [quickchart.io](https://quickchart.io/documentation/graphviz-api/) - API for visualization
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-authors-a-name--authorsa)
