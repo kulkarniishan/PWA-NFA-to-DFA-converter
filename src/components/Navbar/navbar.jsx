@@ -9,7 +9,6 @@ import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/solid'
 
 const converters = [
     { name: 'NFA TO DFA CONVERTER', href: "/dashboard" },
-    { name: 'CFG TO CNF CONVERTER', href: "/dashboard/CFG-to-CNF" },
 ]
 
 function classNames(...classes) {
