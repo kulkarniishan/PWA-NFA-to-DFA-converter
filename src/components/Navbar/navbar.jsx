@@ -70,46 +70,15 @@ export default function Navbar() {
                                 </div>
                                 <div className="hidden sm:block sm:ml-6">
                                     <div className="flex space-x-4">
-                                        <Menu as="div" className="relative inline-block text-left">
-                                            <div>
-                                                <Menu.Button className={`inline-flex justify-center w-full px-4 py-2 text-sm font-medium rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 text-gray-300 hover:bg-gray-700 hover:text-white no-underline px-3 py-2 rounded-md text-sm font-medium  ${Location.pathname.startsWith('/dashboard') ? 'bg-gray-900 text-white hover:bg-gray-900 hover:text-white' : ''}`}>
-                                                    Home
-                                                    <ChevronDownIcon
-                                                        className="w-5 h-5 ml-2 -mr-1 text-violet-200 hover:text-violet-100"
-                                                        aria-hidden="true"
-                                                    />
-                                                </Menu.Button>
-                                            </div>
-                                            <Transition
-                                                as={Fragment}
-                                                enter="transition ease-out duration-100"
-                                                enterFrom="transform opacity-0 scale-95"
-                                                enterTo="transform opacity-100 scale-100"
-                                                leave="transition ease-in duration-75"
-                                                leaveFrom="transform opacity-100 scale-100"
-                                                leaveTo="transform opacity-0 scale-95"
-                                            >
-                                                <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                                                    <div className="px-1 py-1 ">
-                                                        {
-                                                            converters.map((value, key) =>
-                                                                <Menu.Item key={key}>
-                                                                    <NavLink
-                                                                        className={'my-2 group flex rounded-md items-center w-full px-2 py-2 text-sm no-underline px-3 py-2 rounded-md text-sm font-medium text-gray-900 bg-gray-300 shadow-inner hover:text-gray-700 hover:bg-gray-500 dark:text-gray-500 dark:bg-gray-900 dark:hover:text-gray-300 dark:hover:bg-gray-700'}
-                                                                        to={value.href}
-                                                                        exact
-                                                                        key={key}
-                                                                        activeClassName='text-white bg-red-600 hover:text-gray-100 hover:bg-red-600 dark:text-white dark:bg-red-600 dark:hover:text-gray-100 dark:hover:bg-red-600'
-                                                                    >
-                                                                        {value.name}
-                                                                    </NavLink>
-                                                                </Menu.Item>)
-                                                        }
-
-                                                    </div>
-                                                </Menu.Items>
-                                            </Transition>
-                                        </Menu>
+                                        <NavLink
+                                            to={'/dashboard'}
+                                            exact
+                                            className={classNames(
+                                                'text-gray-300 hover:bg-gray-700 hover:text-white no-underline px-3 py-2 rounded-md text-sm font-medium'
+                                            )}
+                                            activeClassName='bg-gray-900 text-white hover:bg-gray-900 hover:text-white'                                        >
+                                            NFA TO DFA CONVERTER
+                                        </NavLink>
                                         <NavLink
                                             to={'/about-us'}
                                             className={classNames(

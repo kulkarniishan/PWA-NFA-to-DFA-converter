@@ -2,7 +2,7 @@ import githubLogo from '../../utils/Images/GitHub-Mark-Light-120px-plus.png'
 
 function Aboutus() {
     return (
-        <div className='min-h-screen dark:text-white p-10 transition duration-500'>
+        <div className='min-h-screen text-white p-10 transition duration-500 dark:bg-gray-700'>
             <div className="grid grid-cols-9 gap-4">
                 <div className="col-span-9 md:col-span-3 max-h-1/4 bg-blue-300 border-b-8 border-r-8 shadow-lg py-4 border-green-700 rounded-md" style={{ minHeight: '30vh' }}>
                     <div class="relative w-40 h-40" align="center">
@@ -26,33 +26,33 @@ function Aboutus() {
                         <div class="row-span">
                             <div className="grid grid-flow-cols mx-auto gap-4">
                                 <div className="row-span mx-auto">
-                                    <div className="container bg-red-700 rounded-lg text-white px-3 py-1">
+                                    <div className="container bg-red-700 rounded-lg  px-3 py-1">
                                         <h4>Ishan Kulkarni</h4>
                                     </div>
                                 </div>
                                 <div className="row-span mx-auto">
-                                    <div className="container bg-red-700 rounded-lg text-white px-3 py-1">
+                                    <div className="container bg-red-700 rounded-lg  px-3 py-1">
                                         <h5>1914034</h5>
                                     </div>
                                 </div>
                                 <div className="row-span mx-auto">
-                                    <div className="container bg-red-700 rounded-lg text-white px-3 py-1">
+                                    <div className="container bg-red-700 rounded-lg  px-3 py-1">
                                         <h5>TY B.Tech IT</h5>
                                     </div>
                                 </div>
                                 <div className="row-span mx-auto px-3">
-                                    <div className="container border-2 border-red-700 rounded-lg text-white px-3 py-1">
+                                    <div className="container border-2 border-red-700 rounded-lg  px-3 py-1">
                                         <p class="text-red-700 text-lg">Description</p>
                                         <p class="text-red-700 text-md">Geek. Problem solver MERN stack enthusiast. ML developer</p>
                                     </div>
                                 </div>
                                 <div className="row-span mx-auto">
                                     <div className="container hover:bg-blue-400 bg-blue-600 rounded-lg text-lg  px-4 py-1 ">
-                                        <a className='text-white no-underline grid  grid-cols-2' href="https://github.com/kulkarniishan">
+                                        <a className=' no-underline grid  grid-cols-2' href="https://github.com/kulkarniishan">
                                             <span className='col-span-1'>
                                                 <img src={githubLogo} width='30em' alt="github Logo" />
                                             </span>
-                                            <span className='col-span-1'>Github</span>
+                                            <span className='col-span-1 text-white'>Github</span>
                                         </a>
                                     </div>
                                 </div>
