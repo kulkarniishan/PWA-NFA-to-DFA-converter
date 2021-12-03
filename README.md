@@ -66,44 +66,12 @@ A step by step series of examples that tell you how to get a development env run
 
 ## 📦 Packages Used <a name = "packages"></a>
 
-<details>
-<summary>npm packages</summary>
-<br/>
-
-| Frontend |
-|:--------|
-| `aws-sdk`@`2.939.0` | 
-| `bcryptjs`@`2.4.3` | 
-| `cookie-parser`@`1.4.5` |
-| `cors`@`2.8.5` | 
-| `dotenv`@`10.0.0` | 
-| `express`@`4.17.1` |
-| `generate-password`@`1.6.1` | 
-| `joi`@`17.4.0` |
-| `jsonwebtoken@`8.5.1` | 
-| `mongoose-slug-generator`@`1.0.4` | 
-| `mongoose-slug-updater`@`3.3.0` | 
-| `mongoose-type-phone`@`1.0.1` | 
-| `mongoose`@`5.13.2` | 
-| `multer-s3-transform`@`2.10.3` |
-| `multer-s3`@`2.9.0` | 
-| `multer`@`1.4.2` | 
-| `nodemailer`@`6.6.3` | 
-| `nodemon`@`2.0.9` | 
-| `passport-jwt`@`4.0.0` | 
-| `passport`@`0.4.1` | 
-| `razorpay`@`2.0.6` | 
-| `react-phone-input-2`@`2.14.0` |
-| `react-rating-stars-component`@`2.2.0` | 
-| `sharp`@`0.28.3` |
-| `shortid`@`2.2.16` | 
-
-</details>
+npm packages
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-authors-a-name--authorsa)
 
 ## 	:pencil2: Authors <a name="authors"></a>
--[Ishan Kulkarni]
--[Anurag Ghosh]
--[Aakshad Thole]
+-[Ishan Kulkarni](https://www.linkedin.com/in/anurag-g-a01531198)
+-[Anurag Ghosh](https://www.linkedin.com/in/kulkarniishan)
+-[Aakshad Thole](https://www.linkedin.com/in/akshad-thole-b756621b2)
