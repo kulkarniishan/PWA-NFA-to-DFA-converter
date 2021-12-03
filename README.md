@@ -72,6 +72,6 @@ npm packages
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-authors-a-name--authorsa)
 
 ## 	:pencil2: Authors <a name="authors"></a>
--[Ishan Kulkarni](https://www.linkedin.com/in/anurag-g-a01531198)
--[Anurag Ghosh](https://www.linkedin.com/in/kulkarniishan)
--[Aakshad Thole](https://www.linkedin.com/in/akshad-thole-b756621b2)
+- [Ishan Kulkarni](https://www.linkedin.com/in/anurag-g-a01531198)
+- [Anurag Ghosh](https://www.linkedin.com/in/kulkarniishan)
+- [Aakshad Thole](https://www.linkedin.com/in/akshad-thole-b756621b2)
