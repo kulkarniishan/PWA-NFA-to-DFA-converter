@@ -45,9 +45,8 @@ A step by step series of examples that tell you how to get a development env run
   - To install dependencies, run `npm install`
   
   - To run the application for development,
-    - run `npm start` in the root folder to start the backend app
     
-    - then run `npm start` in the client folder to start the frontend app
+    - then run `npm start` in the client folder to start the app
 
 - Open [localhost:3000](localhost:3000) in the browser
 
