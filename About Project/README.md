@@ -60,7 +60,29 @@ A step by step series of examples that tell you how to get a development env run
 
 ## 📦 Packages Used <a name = "packages"></a>
 
-npm packages
+| Packages  | Versions |
+| ------------- |:-------------:|
+| @craco/craco      | 6.4.0 |
+| @headlessui/react     | 1.4.1 |
+| @heroicons/react      | 1.0.5    |
+|@hookform/resolvers|2.8.3|
+|autoprefixer| 9.8.8|
+|axios|0.23.0|
+|bootstrap|5.1.3|
+|cra-template|1.1.2|
+|gh-pages|3.2.3|
+|postcss|7.0.39|
+|react|17.0.2|
+|react-bootstrap|2.0.0|
+|react-dom|17.0.2|
+|react-fullscreen-image|0.0.3|
+|react-hook-form|7.19.3|
+|react-icons|4.3.1|
+|react-router-dom|5.3.0|
+|react-scripts|4.0.3|
+|npm:@tailwindcss/postcss7-compat|2.2.17|
+|svg-to-jsx|1.0.4|
+|yup|0.32.11|
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-authors-a-name--authorsa)
 
