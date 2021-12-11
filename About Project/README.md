@@ -1,7 +1,7 @@
 <h1 align="center">NFA-to-DFA-converter</h1>
 
 <p align="center">
- <img width=200px src="src/utils/Images/logo.png"  alt="Project logo" style='background-color: white'></a>
+ <img width=200px src="/src/utils/Images/logo.png"  alt="Project logo" style='background-color: white'></a>
 </p>
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-table-of-contents)
