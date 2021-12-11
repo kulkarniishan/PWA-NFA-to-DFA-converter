@@ -57,9 +57,6 @@ function NFA_to_DFA() {
         console.log(errors)
     }, [errors])
 
-
-
-
     const uniqueArray = (arr) => {
         return Array.from(new Set(arr.map(JSON.stringify))).map(JSON.parse);
     }
@@ -82,7 +79,6 @@ function NFA_to_DFA() {
                 // console.log(tempObj)
                 jsonArray.push(tempObj)
             }
-
             // console.log(jsonArray)
 
             //Filling the array
@@ -167,7 +163,7 @@ function NFA_to_DFA() {
         // eslint-disable-next-line
     }, [])
 
-
+    //Function to visualize the DFA
     const visualize = () => {
         try {
             let finalString = 'digraph G {rankdir=LR;size="8,5";'
@@ -308,12 +304,12 @@ function NFA_to_DFA() {
 
     return (
         <div className='min-h-screen dark:text-white p-10 transition duration-500'>
-            I will Convert NFA to DFA
+            <h2 class="font-sans md:font-serif">I will Convert your NFA to DFA!</h2>
 
             <div className="space-y-4">
 
                 {/* Section-1 */}
-                <div className="block bg-green-300 border-b-8 border-r-8 shadow-lg py-4 border-green-700 rounded-md w-full md:w-3/4 ml-auto my-5" style={{ minHeight: '30vh' }} >
+                <div className="block bg-green-300 border-b-8 border-r-8 shadow-lg py-4 border-green-700 rounded-md w-full md:w-3/4 ml-auto my-5 " style={{ minHeight: '30vh' }} >
                     <div className="bg-green-700 text-xl w-25 mx-auto rounded-full py-1 px-2 text-center text-white mb-3 ">Input Fields</div>
 
                     <div className="grid grid-rows gap-4">
@@ -358,7 +354,6 @@ function NFA_to_DFA() {
                                                     </div>
                                                 </div>
                                             </div>
-
                                         )
                                     })}
                                     <div className="flex justify-end mt-4">

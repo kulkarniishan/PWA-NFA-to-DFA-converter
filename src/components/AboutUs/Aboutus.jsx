@@ -39,7 +39,7 @@ function Aboutus() {
                                 </div>
                                 <div className="row-span mx-auto">
                                     <div className="container hover:bg-blue-400 bg-blue-600 rounded-lg text-lg  px-4 py-1 ">
-                                        <a className='text-white no-underline grid  grid-cols-2' target='_blank' href="https://github.com/kulkarniishan">
+                                        <a className='text-white no-underline grid  grid-cols-2' target='_blank' rel="noopener noreferrer" href="https://github.com/kulkarniishan">
                                             <span className='col-span-1'>
                                                 <img src={githubLogo} width='30em' alt="github Logo" />
                                             </span>
@@ -86,7 +86,7 @@ function Aboutus() {
                                 </div>
                                 <div className="row-span mx-auto">
                                     <div className="container hover:bg-blue-400 bg-blue-600 rounded-lg text-lg  px-4 py-1 ">
-                                        <a className=' no-underline grid  grid-cols-2' target='_blank' href="https://github.com/kulkarniishan">
+                                        <a className=' no-underline grid  grid-cols-2' target='_blank' rel="noopener noreferrer" href="https://github.com/kulkarniishan">
                                             <span className='col-span-1'>
                                                 <img src={githubLogo} width='30em' alt="github Logo" />
                                             </span>
@@ -133,7 +133,7 @@ function Aboutus() {
                                 </div>
                                 <div className="row-span mx-auto">
                                     <div className="container hover:bg-blue-400 bg-blue-600 rounded-lg text-lg  px-4 py-1 ">
-                                        <a className=' no-underline grid  grid-cols-2' target='_blank' href="https://github.com/akshadthole">
+                                        <a className=' no-underline grid  grid-cols-2' target='_blank' rel="noopener noreferrer" href="https://github.com/akshadthole">
                                             <span className='col-span-1'>
                                                 <img src={githubLogo} width='30em' alt="github Logo" />
                                             </span>
@@ -145,11 +145,8 @@ function Aboutus() {
                         </div>
                     </div>
                 </div>
-
             </div>
-            <div className="space-y-4">
-
-            </div>
+            <div className="space-y-4"></div>
         </div>
     )
 }
