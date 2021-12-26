@@ -96,5 +96,7 @@ A step by step series of examples that tell you how to get a development env run
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-built-using-a-name--built_usinga)
 ## :brain: Contribution over Time <a name="contribution"></a>
 <div align="center">
-[![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=kulkarniishan/PWA-NFA-to-DFA-converter)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=kulkarniishan/PWA-NFA-to-DFA-converter)
- </div>
+ <a href="https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=kulkarniishan/PWA-NFA-to-DFA-converter">
+  <img src="https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=kulkarniishan/PWA-NFA-to-DFA-converter" alt="Contribution image"/>
+ </a>
+</div>
