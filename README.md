@@ -93,5 +93,6 @@ A step by step series of examples that tell you how to get a development env run
 - [Anurag Ghosh](https://www.linkedin.com/in/kulkarniishan)
 - [Aakshad Thole](https://www.linkedin.com/in/akshad-thole-b756621b2)
 
-## :pencil2: Contribution over Time <a name="contribution"></a>
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-built-using-a-name--built_usinga)
+## :brain: Contribution over Time <a name="contribution"></a>
 [![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=kulkarniishan/PWA-NFA-to-DFA-converter)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=kulkarniishan/PWA-NFA-to-DFA-converter)
