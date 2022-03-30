@@ -54,7 +54,7 @@ function NFA_to_DFA() {
     // ]
 
     useEffect(() => {
-        console.log(errors)
+        // console.log(errors)
     }, [errors])
 
     const uniqueArray = (arr) => {
@@ -124,26 +124,26 @@ function NFA_to_DFA() {
 
                     rowAdd[symbol] = toBeAddedToSet.toString()
                 }
-                console.log(newStates)
+                // console.log(newStates)
                 let tempNewStates = newStates[i]
-                console.log(finalStates)
+                // console.log(finalStates)
 
                 var isFinalState = finalStates.some(n => tempNewStates.some(h=> h===n))
 
                 answerArray.push({ state: newStates[i].toString(), ...rowAdd, isFinalState })
                 curr += newStates.length > prev ? 1 : 0;
-                console.log(prev, curr, i)
+                // console.log(prev, curr, i)
                 i++
-                console.log(prev, curr, i)
+                // console.log(prev, curr, i)
 
             }
             // console.log('Final Answer', answerArray)
 
             setDfaTable(answerArray);
-            console.log(dfaTable);
+            // console.log(dfaTable);
         }
         catch (Exception) {
-            console.log(Exception)
+            // console.log(Exception)
         }
     }
 
@@ -201,7 +201,7 @@ function NFA_to_DFA() {
             // console.log(transition);
 
             var diagraph = finalString + doubleCircle + circle + plain + init + transition + '}'
-            console.log(diagraph)
+            // console.log(diagraph)
 
             axios.get(`https://quickchart.io/graphviz?graph=${diagraph}`)
                 .then((image) => {
@@ -215,7 +215,7 @@ function NFA_to_DFA() {
 
         }
         catch (Exception) {
-            console.log(Exception)
+            // console.log(Exception)
         }
 
 
@@ -297,14 +297,14 @@ function NFA_to_DFA() {
             setAcceptanceStatus(currRow.isFinalState)
         }
         catch (Exception) {
-            console.log(Exception)
+            // console.log(Exception)
         }
     }
 
 
     return (
         <div className='min-h-screen dark:text-white p-10 transition duration-500'>
-            <h2 class="font-sans md:font-serif">I will Convert your NFA to DFA!</h2>
+            <h2 className="font-sans md:font-serif">I will Convert your NFA to DFA!</h2>
 
             <div className="space-y-4">
 
