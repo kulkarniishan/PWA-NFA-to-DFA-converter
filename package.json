@@ -1,7 +1,11 @@
 {
-  "name": "fasalmitra",
+  "name": "automation-X",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.13.1",
+    "npm": "8.5.4"
+  },
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
