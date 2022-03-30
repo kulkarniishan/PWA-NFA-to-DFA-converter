@@ -357,7 +357,7 @@ function NFA_to_DFA() {
                                         )
                                     })}
                                     <div className="flex justify-end mt-4">
-                                        <input type="button" value="Add a transition" className='col-end-7 col-span-3  bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:border-green-500 rounded'
+                                        <input type="button" value="Add a transition" aria-label="Click here to add a transtion" className='col-end-7 col-span-3  bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:border-green-500 rounded'
                                             onClick={() => {
                                                 transitionFields.append({
                                                     currentState: "",
@@ -382,7 +382,7 @@ function NFA_to_DFA() {
                     {/* Displaying the state transition table */}
                     {dfaTable ? getDfaTable() : ''}
                     <div className="grid grid-cols-12 mb-2 mt-auto">
-                        <input type="button" value="Convert" className='col-end-12 col-span-6  bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded'
+                        <input type="button" value="Convert" aria-label="Click here to convert NFA into DFA" className='col-end-12 col-span-6  bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded'
                             onClick={evaluate_NFA_to_DFA} />
                     </div>
                 </div>
@@ -408,7 +408,7 @@ function NFA_to_DFA() {
 
 
                         <div className="grid grid-cols-8">
-                            <input type="button" value="Check" className='col-end-6 col-span-2  bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:green-blue-500 rounded'
+                            <input type="button" value="Check" aria-label="Click here to check generated DFA" className='col-end-6 col-span-2  bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:green-blue-500 rounded'
                                 onClick={stringValid} />
                         </div>
                         {acceptanceStatus === true ?
