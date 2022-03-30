@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Disclosure} from '@headlessui/react'
+import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../utils/Images/logo.png'
@@ -65,18 +65,23 @@ export default function Navbar() {
                                         <NavLink
                                             to={'/dashboard'}
                                             exact
-                                            className={classNames(
-                                                'text-gray-300 hover:bg-gray-700 hover:text-white no-underline px-3 py-2 rounded-md text-sm font-medium'
-                                            )}
-                                            activeClassName='bg-gray-900 text-white hover:bg-gray-900 hover:text-white'                                        >
+                                            className={({ isActive }) =>
+                                                `${isActive
+                                                    ? "bg-gray-900 text-white hover:bg-gray-900 hover:text-white"
+                                                    : "text-gray-300 hover:bg-gray-700 hover:text-white no-underline"
+                                                } px-3 py-2 rounded-md text-sm font-medium no-underline`
+                                            }
+                                        >
                                             NFA TO DFA CONVERTER
                                         </NavLink>
                                         <NavLink
                                             to={'/about-us'}
-                                            className={classNames(
-                                                'text-gray-300 hover:bg-gray-700 hover:text-white no-underline px-3 py-2 rounded-md text-sm font-medium'
-                                            )}
-                                            activeClassName='bg-gray-900 text-white hover:bg-gray-900 hover:text-white'
+                                            className={({ isActive }) =>
+                                                `${isActive
+                                                    ? "bg-gray-900 text-white hover:bg-gray-900 hover:text-white"
+                                                    : "text-gray-300 hover:bg-gray-700 hover:text-white no-underline"
+                                                } px-3 py-2 rounded-md text-sm font-medium no-underline`
+                                            }
                                         >
                                             About Us
                                         </NavLink>

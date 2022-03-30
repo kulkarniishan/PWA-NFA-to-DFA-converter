@@ -22,8 +22,8 @@ let schema = yup.object().shape({
     inputString: yup.string().required(),
 });
 
-function NFA_to_DFA() {
-
+function NFA_TO_DFA() {
+    console.log("ehl")
     const [dfaTable, setDfaTable] = useState(null);
     const [dfaImage, setDfaImage] = useState(null);
     const [acceptanceStatus, setAcceptanceStatus] = useState(null);
@@ -423,4 +423,4 @@ function NFA_to_DFA() {
     )
 }
 
-export default NFA_to_DFA
+export default NFA_TO_DFA
