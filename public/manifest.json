@@ -36,6 +36,12 @@
       "src": "android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "safari-pinned-tab.svg",
+      "sizes": "683x683",
+      "type": "image/svg",
+      "purpose": "maskable"
     }
   ],
   "start_url": ".",
