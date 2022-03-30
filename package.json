@@ -1,6 +1,6 @@
 {
-  "name": "automation-X",
-  "version": "0.1.0",
+  "homepage": "http://kulkarniishan.github.io/PWA-NFA-to-DFA-converter",
+  "name": "nfa-to-dfa-converter",  "version": "0.1.0",
   "private": true,
   "engines": {
     "node": "16.13.1",
