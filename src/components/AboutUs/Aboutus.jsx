@@ -47,8 +47,8 @@ function Aboutus() {
                     <div className="container border-2 border-blue-700 rounded-lg text-white px-3 py-1">
                       <p className="text-blue-700 text-lg">Description</p>
                       <p className="text-blue-700 text-md">
-                        Tech Geek, Problem solver, AI/ML enthusiast, JAVA
-                        developer, Frontend developer
+                        Tech Geek, Problem solver 🤛, AI/ML enthusiast, JAVA
+                        developer , Frontend developer, MERN/MEAN Stack enthusiast 🌺
                       </p>
                     </div>
                   </div>
@@ -111,7 +111,7 @@ function Aboutus() {
                     <div className="container border-2 border-red-700 rounded-lg  px-3 py-1">
                       <p className="text-red-700 text-lg">Description</p>
                       <p className="text-red-700 text-md">
-                        Geek. Problem solver MERN stack enthusiast. ML developer
+                        Geek ⚓. Problem solver MERN stack enthusiast. ML developer 🤖, Full Stack Developer, DevOPs Enthusiate 👁️
                       </p>
                     </div>
                   </div>
