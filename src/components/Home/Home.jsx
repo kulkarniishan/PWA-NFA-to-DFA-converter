@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import NFA_TO_DFA from './Converters/NFA-DFA/NFA_TO_DFA'
+import NFA_TO_DFA from './Converters/NFA_TO_DFA'
 
 function Home() {
     return (
