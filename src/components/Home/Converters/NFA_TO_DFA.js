@@ -310,7 +310,7 @@ function NFA_TO_DFA() {
 
                 {/* Section-1 */}
                 <div className="block bg-green-300 border-b-8 border-r-8 shadow-lg py-4 border-green-700 rounded-md w-full md:w-3/4 ml-auto my-5 " style={{ minHeight: '30vh' }} >
-                    <div className="bg-green-700 text-xl w-25 mx-auto rounded-full py-1 px-2 text-center text-white mb-3 ">Input Fields</div>
+                    <div className="bg-green-700 text-xl w-1/2 md:w-1/4 mx-auto rounded-full py-1 px-2 text-center text-white mb-3 ">Input Fields</div>
 
                     <div className="grid grid-rows gap-4">
                         <div className="row-span-1  py-2">
@@ -377,7 +377,7 @@ function NFA_TO_DFA() {
 
                 {/* Section-2 */}
                 <div className="block bg-pink-300 border-b-8 border-r-8 shadow-lg border-pink-700  items- rounded-md w-full md:w-3/4 mr-auto my-5 px-4 py-3 overflow-x-auto grid-flow-row" style={{ minHeight: '30vh' }}>
-                    <div className="bg-red-700 text-xl w-25 mx-auto rounded-full py-1 px-2 text-center text-white mb-3 ">Transition Table</div>
+                    <div className="bg-red-700 text-xl w-1/2 md:w-1/4 mx-auto rounded-full py-1 px-2 text-center text-white mb-3 ">Transition Table</div>
 
                     {/* Displaying the state transition table */}
                     {dfaTable ? getDfaTable() : ''}
@@ -390,7 +390,7 @@ function NFA_TO_DFA() {
                 {/* Section-3 */}
 
                 <div className="block bg-purple-300 border-b-8 border-r-8 shadow-lg border-purple-700 rounded-md w-full md:w-3/4 ml-auto my-5 py-2" style={{ minHeight: '30vh' }}>
-                    <div className="bg-purple-700 text-xl w-25 mx-auto rounded-full py-1 px-2 text-center text-white mb-3 ">DFA Diagram</div>
+                    <div className="bg-purple-700 text-xl w-1/2 md:w-1/4 mx-auto rounded-full py-1 px-2 text-center text-white mb-3 ">DFA Diagram</div>
                     {
                         dfaImage && <embed src={`data:image/svg+xml,${dfaImage}`} className='object-contain h-64 w-full' alt="dfa" />
 
@@ -399,7 +399,7 @@ function NFA_TO_DFA() {
 
                 {/* Section-4 */}
                 <div className="block bg-blue-300 border-b-8 border-r-8 shadow-lg border-blue-700 rounded-md w-full md:w-3/4 mr-auto my-5 py-2" style={{ minHeight: '30vh' }}>
-                    <div className="bg-blue-700 text-xl w-25 mx-auto rounded-full py-1 px-2 text-center text-white mb-3 ">Test A String</div>
+                    <div className="bg-blue-700 text-xl w-1/2 md:w-1/4 mx-auto rounded-full py-1 px-2 text-center text-white mb-3 ">Test A String</div>
 
                     <div className="container text-gray-700 text-sm font-bold my-2">
                         <div className="row mb-4">
@@ -412,7 +412,7 @@ function NFA_TO_DFA() {
                                 onClick={stringValid} />
                         </div>
                         {acceptanceStatus === true ?
-                            <div className="bg-green-500 text-xl w-25 mx-auto rounded-full py-1 px-2 text-center mt-4 text-white mb-3 ">String Accepted</div>
+                            <div className="bg-green-500 text-xl w-1/2 md:w-1/4 mx-auto rounded-full py-1 px-2 text-center mt-4 text-white mb-3 ">String Accepted</div>
                             : (acceptanceStatus === false ?
                                 <div className="bg-red-600 text-xl w-25 mx-auto rounded-2xl py-1 px-2 text-center mt-4 text-white mb-3 ">String Rejected</div>
                                 : '')}
