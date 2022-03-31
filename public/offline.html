@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
   <head>
     <!-- Meta tags for adding metadata-->
@@ -79,14 +79,14 @@
             body {
                 height: 100%;
                 margin: 0;
-                background: #0a1f44;
+                background: rgb(1, 31, 17);
                 display: flex;
                 align-items: center;
                 text-align: center;
                 justify-content: center;
             }
         
-            .city {
+            .container {
                 align-items: center;
                 width: 80%;
                 display: flex;
@@ -94,19 +94,55 @@
                 flex-direction: column;
                 padding: 40px 8%;
                 border-radius: 20px;
-                background: #fff;
+                background: rgba(12, 12, 12, 0.893);
             }
 
-            .city-name {
-                font-size: 2em;
+            .neons {
+              margin-top: 1rem;
+              text-align: center;
+            }
+
+            .neons h1 {
+              font-size: 3rem;
+              text-align: center;
+              font-weight: bold;
+              -webkit-animation: glow 2s ease-in-out infinite alternate;
+              -moz-animation: glow 2s ease-in-out infinite alternate;
+              animation: glow 2s ease-in-out infinite alternate;
+            }
+
+            @keyframes glow {
+              from {
+                  color: #fff;
+                  text-shadow: 0 0 5px #8c00ff, 0 0 10px #8c00ff, 0 0 15px #8c00ff, 0 0 20px #8c00ff, 0 0 25px #8c00ff, 0 0 30px #00fff2, 0 0 35px #00fff2, 0 0 40px #00fff2;
+                }
+              
+                to {
+                  color: gray;
+                  text-shadow: 0 0 10px #8c00ff, 0 0 20px #8c00ff, 0 0 30px #8c00ff, 0 0 40px #8c00ff, 0 0 50px #8c00ff, 0 0 60px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+                }
+            }
+
+            @-webkit-keyframes glow {
+                from {
+                  color: #fff;
+                  text-shadow: 0 0 5px #8c00ff, 0 0 10px #8c00ff, 0 0 15px #8c00ff, 0 0 20px #8c00ff, 0 0 25px #8c00ff, 0 0 30px #00fff2, 0 0 35px #00fff2, 0 0 40px #00fff2;
+                }
+              
+                to {
+                  color: gray;
+                  text-shadow: 0 0 10px #8c00ff, 0 0 20px #8c00ff, 0 0 30px #8c00ff, 0 0 40px #8c00ff, 0 0 50px #8c00ff, 0 0 60px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+                }
             }
         </style>
     </head>
     <body>
-        <div class="city">
-            <h2 class="city-name">
-                <span>Please go online to check the current weather.</span>
-            </h2>
+      <div class="container">
+        <div class="row">
+          <div class="neons col-12">
+            <h1><em>Please go online to convert  your NFA to equivalent DFA.</em></h1>
+          </div>
         </div>
+      </div>
     </body>
 </html>
