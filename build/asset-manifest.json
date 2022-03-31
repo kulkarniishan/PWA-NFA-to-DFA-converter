@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/PWA-NFA-to-DFA-converter/static/css/main.c1d32440.css",
+    "main.js": "/PWA-NFA-to-DFA-converter/static/js/main.5f97459a.js",
+    "static/js/377.1aa0d340.chunk.js": "/PWA-NFA-to-DFA-converter/static/js/377.1aa0d340.chunk.js",
+    "static/media/logo.png": "/PWA-NFA-to-DFA-converter/static/media/logo.db7a2894b860f0dd4f8b.png",
+    "index.html": "/PWA-NFA-to-DFA-converter/index.html",
+    "main.c1d32440.css.map": "/PWA-NFA-to-DFA-converter/static/css/main.c1d32440.css.map",
+    "main.5f97459a.js.map": "/PWA-NFA-to-DFA-converter/static/js/main.5f97459a.js.map",
+    "377.1aa0d340.chunk.js.map": "/PWA-NFA-to-DFA-converter/static/js/377.1aa0d340.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1d32440.css",
+    "static/js/main.5f97459a.js"
+  ]
+}
