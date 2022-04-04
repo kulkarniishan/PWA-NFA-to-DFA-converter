@@ -21,7 +21,7 @@
 
 Progrssive Web APP (PWA) designed to accept the input about the states and transtions of a Non-Deterministic Automata (NFA) and to convert it into an equivalent Deterministic Finite Automata (DFA) and visualize it.
 <br/>
-<a href="https://automatonx.herokuapp.com/">Click here to view the web app </a>
+<a href="https://automatonx.herokuapp.com/"><img src="./speedtestDesktop.svg" width="auto"></a>
 <br/>
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-getting-started-a-name--getting_starteda)
