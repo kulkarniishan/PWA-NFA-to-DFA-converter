@@ -113,6 +113,3 @@ A step by step series of examples that tell you how to get a development env run
   <img src="https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=kulkarniishan/PWA-NFA-to-DFA-converter" alt="Contribution image"/>
  </a>
 </div>
-
-View in [Github Pages](https://tomcam.github.io/least-github-pages/) or directly on [Github](https://github.com/tomcam/least-github-pages/) 
-* [Your GitHub Pages URL and adding preview to your README.md](/least-github-pages/add-github-pages-preview.html)
