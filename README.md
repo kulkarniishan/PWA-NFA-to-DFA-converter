@@ -8,16 +8,12 @@
 
 ## 📝 Table of Contents
 
-<div align="center">
- 
 - [About](#about)
 - [Getting Started ](#getting_started)
 - [Built Using](#built_using)
 - [Packages](#packages)
 - [Authors](#authors)
 - [Contribution](#contribution)
- 
- </div>
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-about-a-name--abouta)
 
