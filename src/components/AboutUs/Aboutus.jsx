@@ -5,10 +5,17 @@ function Aboutus() {
   return (
     <>
       <Helmet>
-          <title>About the developers</title>
-          <meta name="description" content="Information about the creators of this Webpage." />
-          <meta name="robots" content="noindex"/>
-          <link rel="cononical" href="/about-us" />
+        <title>About the developers</title>
+        <meta
+          name="author"
+          content="Co-authored by Ishan Kulkarni, Anurag Ghosh, Akshad Thole"
+        />
+        <meta
+          name="description"
+          content="Information about the creators of this Webpage."
+        />
+        <meta name="robots" content="noindex" />
+        <link rel="cononical" href="/about-us" />
       </Helmet>
       <div className="min-h-screen text-white p-10 transition duration-500 dark:bg-gray-700">
         <div className="grid grid-cols-9 gap-4">
@@ -48,7 +55,8 @@ function Aboutus() {
                       <p className="text-blue-700 text-lg">Description</p>
                       <p className="text-blue-700 text-md">
                         Tech Geek, Problem solver 🤛, AI/ML enthusiast, JAVA
-                        developer , Frontend developer, MERN/MEAN Stack enthusiast 🌺
+                        developer , Frontend developer, MERN/MEAN Stack
+                        enthusiast 🌺
                       </p>
                     </div>
                   </div>
@@ -111,7 +119,8 @@ function Aboutus() {
                     <div className="container border-2 border-red-700 rounded-lg  px-3 py-1">
                       <p className="text-red-700 text-lg">Description</p>
                       <p className="text-red-700 text-md">
-                        Geek ⚓. Problem solver MERN stack enthusiast. ML developer 🤖, Full Stack Developer, DevOPs Enthusiate 👁️
+                        Geek ⚓. Problem solver MERN stack enthusiast. ML
+                        developer 🤖, Full Stack Developer, DevOPs Enthusiate 👁️
                       </p>
                     </div>
                   </div>

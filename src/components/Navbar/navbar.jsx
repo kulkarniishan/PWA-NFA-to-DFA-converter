@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Disclosure } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Disclosure } from '@headlessui/react';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../utils/Images/logo.png'
+import logo from '../../utils/Images/logo.png';
 
 
 function classNames(...classes) {
