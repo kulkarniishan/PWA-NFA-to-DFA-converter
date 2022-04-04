@@ -19,10 +19,15 @@
 
 ## 🧐 About <a name = "about"></a>
 
+<div align="center">
+ 
 Progrssive Web APP (PWA) designed to accept the input about the states and transtions of a Non-Deterministic Automata (NFA) and to convert it into an equivalent Deterministic Finite Automata (DFA) and visualize it.
 <br/>
-<a href="https://automatonx.herokuapp.com/"><img src="./speedtestDesktop.svg" width="auto"></a>
+<a href="https://automatonx.herokuapp.com/"><img src="./speedtestDesktop.svg" width="auto"/></a>
+</a>
 <br/>
+ 
+</div>
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-getting-started-a-name--getting_starteda)
 
@@ -63,6 +68,8 @@ A step by step series of examples that tell you how to get a development env run
 
 ## 📦 Packages Used <a name = "packages"></a>
 
+<div align="center">
+ 
 | Packages  | Versions |
 | ------------- |:-------------:|
 | @craco/craco      | 6.4.0 |
@@ -86,6 +93,8 @@ A step by step series of examples that tell you how to get a development env run
 |npm:@tailwindcss/postcss7-compat|2.2.17|
 |svg-to-jsx|1.0.4|
 |yup|0.32.11|
+ 
+</div>
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-authors-a-name--authorsa)
 
@@ -96,7 +105,9 @@ A step by step series of examples that tell you how to get a development env run
 - [Aakshad Thole](https://www.linkedin.com/in/akshad-thole-b756621b2)
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-built-using-a-name--built_usinga)
+
 ## :brain: Contribution over Time <a name="contribution"></a>
+
 <div align="center">
  <a href="https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=kulkarniishan/PWA-NFA-to-DFA-converter">
   <img src="https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=kulkarniishan/PWA-NFA-to-DFA-converter" alt="Contribution image"/>
