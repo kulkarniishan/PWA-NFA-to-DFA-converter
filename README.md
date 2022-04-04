@@ -63,6 +63,8 @@ A step by step series of examples that tell you how to get a development env run
 
 ## 📦 Packages Used <a name = "packages"></a>
 
+<div align="center">
+ 
 | Packages  | Versions |
 | ------------- |:-------------:|
 | @craco/craco      | 6.4.0 |
@@ -86,6 +88,8 @@ A step by step series of examples that tell you how to get a development env run
 |npm:@tailwindcss/postcss7-compat|2.2.17|
 |svg-to-jsx|1.0.4|
 |yup|0.32.11|
+ 
+</div>
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-authors-a-name--authorsa)
 
