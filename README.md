@@ -36,7 +36,6 @@ Progrssive Web APP (PWA) designed to accept the input about the states and trans
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-getting-started-a-name--getting_starteda)
 
-<div align="center">
  
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -62,20 +61,16 @@ A step by step series of examples that tell you how to get a development env run
 
 - Open [localhost:3000](localhost:3000) in the browser
  
- </div>
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-built-using-a-name--built_usinga)
 
 ## :hammer_and_wrench: Built Using <a name = "built_using"></a>
-
-<div align="center">
  
 - [React](https://reactjs.org/) - Web Framework
 - [Tailwind CSS](https://tailwindcss.com/) - CSS Framework
 - [GraphViz API](https://github.com/DomParfitt/graphviz-react#readme) - Library for visualization of the DFA
 - [quickchart.io](https://quickchart.io/documentation/graphviz-api/) - API for visualization
  
-</div>
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-authors-a-name--authorsa)
 
@@ -112,14 +107,11 @@ A step by step series of examples that tell you how to get a development env run
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-authors-a-name--authorsa)
 
 ## :pencil2: Authors <a name="authors"></a>
-
-<div align="center">
  
 - [Ishan Kulkarni](https://www.linkedin.com/in/anurag-g-a01531198)
 - [Anurag Ghosh](https://www.linkedin.com/in/kulkarniishan)
 - [Aakshad Thole](https://www.linkedin.com/in/akshad-thole-b756621b2)
  
- </div>
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-built-using-a-name--built_usinga)
 ## :brain: Contribution over Time <a name="contribution"></a>
