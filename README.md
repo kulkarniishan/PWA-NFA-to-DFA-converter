@@ -14,6 +14,7 @@
 - [Packages](#packages)
 - [Authors](#authors)
 - [Contribution](#contribution)
+- [Performance of Web App](#performance)
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-about-a-name--abouta)
 
@@ -23,7 +24,7 @@
  
 Progrssive Web APP (PWA) designed to accept the input about the states and transtions of a Non-Deterministic Automata (NFA) and to convert it into an equivalent Deterministic Finite Automata (DFA) and visualize it.
 <br/>
-<a href="https://automatonx.herokuapp.com/"><img src="./speedtestDesktop.svg" width="auto"/></a>
+<a href="https://automatonx.herokuapp.com/">Click here to view the website</a>
 </a>
 <br/>
  
@@ -112,4 +113,21 @@ A step by step series of examples that tell you how to get a development env run
  <a href="https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=kulkarniishan/PWA-NFA-to-DFA-converter">
   <img src="https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=kulkarniishan/PWA-NFA-to-DFA-converter" alt="Contribution image"/>
  </a>
+</div>
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-authors-a-name--authorsa)
+
+## 🧐 About <a name = "performance"></a>
+
+<div align="center">
+<ul>
+    <li>
+        <h2> Performance of the Web App on Desktop </h2>
+        <img src="./speedtestDesktop.svg" alt="performance in desktop" width="auto"/>
+    </li>
+    <li>
+        <h2> Performance of the Web App on Mobile Device </h2>
+        <img src="./speedtestMobile.svg" alt="performance in mobile Device" width="auto"/>
+    </li>
+</ul>
 </div>
